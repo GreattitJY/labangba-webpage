@@ -1,6 +1,7 @@
 /* util */
 @import "./util/reset.css";
 @import "./util/font.css";
+@import "./util/color.css";
 
 /* components */
 @import "./components/header.css";
