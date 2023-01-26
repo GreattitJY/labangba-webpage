@@ -1,0 +1,7 @@
+<svg id="profile_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="사각형_633" data-name="사각형 633" width="24" height="24" fill="none" opacity="0.24"/>
+  <g id="profile_icon-2" data-name="profile_icon" transform="translate(4 3.5)">
+    <path id="패스_448" data-name="패스 448" d="M20,20.5v-2a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2" transform="translate(-4 -3.5)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="패스_449" data-name="패스 449" d="M12,11.5a4,4,0,1,0-4-4A4,4,0,0,0,12,11.5Z" transform="translate(-4 -3.5)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>
