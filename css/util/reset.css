@@ -135,3 +135,11 @@ table {
 button {
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
