@@ -9,7 +9,7 @@ const renderText = async () => {
     }
     return dataArray;
   } catch (err) {
-    console.error(err);
+    console.eror(err);
   }
 };
 

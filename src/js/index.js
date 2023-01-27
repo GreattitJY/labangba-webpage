@@ -1,1 +1,1 @@
-import { rollingText } from "./headerText.js";
+import { rollingText } from "./rollingText.js";
