@@ -1,7 +1,7 @@
 const renderText = async () => {
   try {
     let dataArray = [];
-    const res = await fetch("../data/rollingText.json");
+    const res = await fetch("../src/data/rollingText.json");
     const result = await res.json();
 
     for (const data of result) {
