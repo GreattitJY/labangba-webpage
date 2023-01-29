@@ -5,7 +5,6 @@
   left: 0;
   right: 0;
   display: flex;
-  background: blue;
   align-items: center;
   padding: 12px 20px;
   box-shadow: 0 2px 4px var(--border-light-gray);
@@ -55,8 +54,6 @@
 /* 검색창 */
 
 .btn-search-active {
-  background: red;
-  /* display: block; */
   background: url("../../assets/images/gnb_search.svg");
   width: 24px;
   height: 24px;
@@ -211,4 +208,59 @@
     margin: 0 5px;
     vertical-align: 0.4rem;
   }
+}
+
+/* 검색창 모달 */
+
+.box-modal {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+
+  padding: 14px 20px;
+}
+
+.form-search {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  margin: 0 12px;
+}
+
+.input-search-modal {
+  width: 100%;
+  background-color: var(--input-light-gray);
+  border: none;
+  border-radius: 22px;
+  padding: 14px 60px 14px 18px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.input-search-modal::placeholder {
+  color: var(--text-light-gray);
+  font-weight: 500;
+}
+
+.input-search-modal {
+  outline: none;
+}
+
+.btn-submit {
+  background: url("../../assets/images/gnb_search.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  padding: 0;
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
