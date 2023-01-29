@@ -1,9 +1,19 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px var(--border-light-gray);
+  background-color: #fff;
+}
+
+.btn-sidebar {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid;
-  border-color: var(--border-light-gray);
-  padding: 8px 0px 8px 25px;
 }
 
 /* 로고 부분 */
@@ -11,12 +21,13 @@ header {
 .img-logo {
   width: 74px;
   height: 31px;
-  margin-bottom: 3px;
+  object-fit: cover;
 }
 
 /* 검색창 */
 
 .search {
+  display: none;
   margin-left: 25px;
   position: relative;
 }
@@ -57,7 +68,8 @@ header {
 
 /* 텍스트 링크 */
 .text-info {
-  display: flex;
+  display: none;
+  /* display: flex; */
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
@@ -86,38 +98,61 @@ header {
 
 /* 로그인 및 회원가입 */
 
-.article-login {
-  position: relative;
+.link-login {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
-  padding: 0 20px 0 0;
-  font-size: 1.4rem;
-  color: var(--text-light-gray);
-}
-
-.article-login::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 20px;
-  background-color: var(--border-light-gray);
-  margin-right: 20px;
 }
 
 .img-login {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
 }
 
-.text-login::after {
-  content: "";
-  display: inline-block;
-  width: 3px;
-  height: 3px;
-  background-color: var(--text-light-gray);
-  border-radius: 50%;
-  margin: 0 5px;
-  vertical-align: 0.4rem;
+/* 너비가 1000px 이상일 때 */
+
+.article-login {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .link-login {
+    display: none;
+  }
+
+  .article-login {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 20px 0 0;
+    font-size: 1.4rem;
+    color: var(--text-light-gray);
+  }
+
+  .article-login::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: var(--border-light-gray);
+    margin-right: 20px;
+  }
+
+  .img-login {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .text-login::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: var(--text-light-gray);
+    border-radius: 50%;
+    margin: 0 5px;
+    vertical-align: 0.4rem;
+  }
 }
