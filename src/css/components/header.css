@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  background: blue;
   align-items: center;
   padding: 12px 20px;
   box-shadow: 0 2px 4px var(--border-light-gray);
@@ -33,14 +33,38 @@
   }
 }
 
-/* 로고 부분 */
+/* 로고 */
+
+.link-logo {
+  max-width: 70px;
+  margin-left: auto;
+}
+
 .img-logo {
-  width: 74px;
-  height: 31px;
+  width: 100%;
   object-fit: cover;
 }
 
+@media screen and (min-width: 1000px) {
+  .link-logo {
+    max-width: 74px;
+    margin-left: 0;
+  }
+}
+
 /* 검색창 */
+
+.btn-search-active {
+  background: red;
+  /* display: block; */
+  background: url("../../assets/images/gnb_search.svg");
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  position: relative;
+  right: 24px;
+}
+
 .search {
   display: none;
 }
@@ -50,6 +74,10 @@
 }
 
 @media screen and (min-width: 1000px) {
+  .btn-search-active {
+    display: none;
+  }
+
   .search {
     display: block;
     margin-left: 25px;
