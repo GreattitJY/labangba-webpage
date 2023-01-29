@@ -13,11 +13,18 @@
 </head>
 
 <body>
+
   <nav>
     <header>
+
+      <button class="btn-sidebar">
+        <img src="./src/assets/images/gnb_burger.svg" alt="사이드바 메뉴입니다.">
+      </button>
+
       <a href="" class="link-logo">
         <img src="./src/assets/images/gnb_bi.svg" alt="라방 데이터랩 로고" class="img-logo">
       </a>
+
       <form class="search">
         <input type="text" placeholder="라방 또는 상품을 검색하세요. (ex: 유모차)" class="input-search">
         <button class="btn-search" aria-label="검색"></button>
@@ -26,14 +33,22 @@
         <p class="text-annote">인기</p>
         <a href="" class="link-goods">문구가 바뀌는 부분 말줄임표 테스트 테스트테스트테스트</a>
       </div>
+
+      <!-- 로그인 : 화면 너비가 1000px 이상일 때 -->
       <article class="article-login">
         <img src="./src/assets/images/gnb_user.svg" alt="" class="img-login">
         <a href="" class="text-login">로그인</a>
         <a href="" class="text-signup">회원가입</a>
       </article>
+      <!-- 로그인 : 화면 너비가 1000px 미만일 때 -->
+      <a href="" class="link-login">
+        <img src="./src/assets/images/gnb_user (1).svg" alt="로그인 페이지 링크입니다." class="img-login">
+      </a>
     </header>
+
     <aside></aside>
   </nav>
+
   <script src="./src/js/index.js" type="module"></script>
 </body>
 
