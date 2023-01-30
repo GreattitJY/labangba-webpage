@@ -1,36 +1,82 @@
-const sidebarClose = (() => {
-  const $btnClose = document.querySelector(".sidebar-close");
-  const $sidebarWrap = document.querySelector(".sidebar-wrap");
+const $body = document.querySelector("body");
+
+const $btnOpne = document.querySelector(".btn-sidebar");
+const $btnClose = document.querySelector(".sidebar-close");
+const $imgClose = $btnClose.querySelector("img");
+
+const $sidebarWrap = document.querySelector(".sidebar-wrap");
+
+const $sidebarTitle = document.querySelector(".sidebar-title");
+const $sidebarTitleSub = document.querySelector(".sidebar-title-sub");
+
+const $sidebarLinkText = document.querySelectorAll(".sidebar-section a > span");
+
+const sidebarView = () => {
+  $btnClose.addEventListener("click", () => {
+    $sidebarTitle.classList.remove("ir");
+    $sidebarTitleSub.textContent = "데이터분석";
+    $body.style.paddingLeft = "180px";
+    $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
+    $imgClose.removeAttribute("id");
+    $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+    [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
+    sidebarClose();
+  });
+};
+
+const sidebarClose = () => {
   const sidebarBlack = matchMedia("screen and (min-width: 1000px)");
-  const $sidebarLinkText = document.querySelectorAll(".sidebar-section a > span");
 
   $btnClose.addEventListener("click", () => {
     if (sidebarBlack.matches) {
       [...$sidebarLinkText].map((span) => (span.style.display = "none"));
+      $sidebarTitle.classList.add("ir");
+      $sidebarTitleSub.textContent = "데이터";
+      $body.style.paddingLeft = "64px";
+      $imgClose.setAttribute("src", "./src/assets/images/gnb_burger.svg");
+      $imgClose.setAttribute("id", "sidebar-view");
+      $imgClose.setAttribute("alt", "사이드바 열기 버튼입니다.");
+      sidebarView();
     } else {
       $sidebarWrap.style.display = "none";
+      $body.style.paddingLeft = "0px";
     }
   });
-})();
+};
 
-const sidebarOpen = (() => {
-  const $btnOpne = document.querySelector(".btn-sidebar");
-  const $sidebarWrap = document.querySelector(".sidebar-wrap");
-  const $sidebarLinkText = document.querySelectorAll(".sidebar-section a > span");
-
-  $btnOpne.addEventListener("click", () => {
-    $sidebarWrap.style.display = "block";
-    [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
-  });
-})();
+$btnOpne.addEventListener("click", () => {
+  $sidebarWrap.style.display = "block";
+  [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
+  $sidebarTitle.classList.remove("ir");
+  $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
+  $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+});
 
 window.onresize = function () {
   const width = window.innerWidth;
-  const $sidebarWrap = document.querySelector(".sidebar-wrap");
 
-  if (width >= 1000) {
+  if (width >= 1200) {
+    $body.style.paddingLeft = "180px";
     $sidebarWrap.style.display = "block";
+    [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
+    $sidebarTitle.classList.remove("ir");
+    $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
+    $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+  } else if (width >= 1000 && width < 1200) {
+    $sidebarWrap.style.display = "block";
+    $body.style.paddingLeft = "64px";
+    [...$sidebarLinkText].map((span) => (span.style.display = "none"));
+    $sidebarTitle.classList.add("ir");
+    $sidebarTitleSub.textContent = "데이터";
+    $body.style.paddingLeft = "64px";
+    $imgClose.setAttribute("src", "./src/assets/images/gnb_burger.svg");
+    $imgClose.setAttribute("id", "sidebar-view");
+    $imgClose.setAttribute("alt", "사이드바 열기 버튼입니다.");
+    sidebarView();
   } else {
     $sidebarWrap.style.display = "none";
+    $body.style.paddingLeft = "0px";
   }
 };
+
+sidebarClose();
