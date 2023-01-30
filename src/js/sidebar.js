@@ -11,15 +11,38 @@ const $sidebarTitleSub = document.querySelector(".sidebar-title-sub");
 
 const $sidebarLinkText = document.querySelectorAll(".sidebar-section a > span");
 
+const sidebarShow = () => {
+  $sidebarWrap.style.display = "block";
+  [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
+  $sidebarTitle.classList.remove("ir");
+  $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
+  $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+};
+
+const sidebarOpen = () => {
+  $sidebarTitle.classList.remove("ir");
+  $sidebarTitleSub.textContent = "데이터분석";
+  $body.style.paddingLeft = "180px";
+  $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
+  $imgClose.removeAttribute("id");
+  $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+  [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
+  sidebarClose();
+};
+
+const sidebarMini = () => {
+  [...$sidebarLinkText].map((span) => (span.style.display = "none"));
+  $sidebarTitle.classList.add("ir");
+  $sidebarTitleSub.textContent = "데이터";
+  $body.style.paddingLeft = "64px";
+  $imgClose.setAttribute("src", "./src/assets/images/gnb_burger.svg");
+  $imgClose.setAttribute("id", "sidebar-view");
+  $imgClose.setAttribute("alt", "사이드바 열기 버튼입니다.");
+};
+
 const sidebarView = () => {
   $btnClose.addEventListener("click", () => {
-    $sidebarTitle.classList.remove("ir");
-    $sidebarTitleSub.textContent = "데이터분석";
-    $body.style.paddingLeft = "180px";
-    $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
-    $imgClose.removeAttribute("id");
-    $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
-    [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
+    sidebarOpen();
     sidebarClose();
   });
 };
@@ -29,13 +52,7 @@ const sidebarClose = () => {
 
   $btnClose.addEventListener("click", () => {
     if (sidebarBlack.matches) {
-      [...$sidebarLinkText].map((span) => (span.style.display = "none"));
-      $sidebarTitle.classList.add("ir");
-      $sidebarTitleSub.textContent = "데이터";
-      $body.style.paddingLeft = "64px";
-      $imgClose.setAttribute("src", "./src/assets/images/gnb_burger.svg");
-      $imgClose.setAttribute("id", "sidebar-view");
-      $imgClose.setAttribute("alt", "사이드바 열기 버튼입니다.");
+      sidebarMini();
       sidebarView();
     } else {
       $sidebarWrap.style.display = "none";
@@ -45,11 +62,7 @@ const sidebarClose = () => {
 };
 
 $btnOpne.addEventListener("click", () => {
-  $sidebarWrap.style.display = "block";
-  [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
-  $sidebarTitle.classList.remove("ir");
-  $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
-  $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+  sidebarShow();
 });
 
 window.onresize = function () {
@@ -57,21 +70,11 @@ window.onresize = function () {
 
   if (width >= 1200) {
     $body.style.paddingLeft = "180px";
-    $sidebarWrap.style.display = "block";
-    [...$sidebarLinkText].map((span) => (span.style.display = "inline"));
-    $sidebarTitle.classList.remove("ir");
-    $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
-    $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
+    sidebarOpen();
   } else if (width >= 1000 && width < 1200) {
     $sidebarWrap.style.display = "block";
     $body.style.paddingLeft = "64px";
-    [...$sidebarLinkText].map((span) => (span.style.display = "none"));
-    $sidebarTitle.classList.add("ir");
-    $sidebarTitleSub.textContent = "데이터";
-    $body.style.paddingLeft = "64px";
-    $imgClose.setAttribute("src", "./src/assets/images/gnb_burger.svg");
-    $imgClose.setAttribute("id", "sidebar-view");
-    $imgClose.setAttribute("alt", "사이드바 열기 버튼입니다.");
+    sidebarMini();
     sidebarView();
   } else {
     $sidebarWrap.style.display = "none";
