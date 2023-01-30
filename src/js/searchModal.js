@@ -1,4 +1,4 @@
-export const searchClose = (() => {
+const searchClose = (() => {
   const $btnClose = document.querySelector(".btn-close");
   const $boxModal = document.querySelector(".box-modal");
   const $input = document.querySelector(".input-search-modal");
@@ -8,7 +8,7 @@ export const searchClose = (() => {
   });
 })();
 
-export const searchOpen = (() => {
+const searchOpen = (() => {
   const $btnOpen = document.querySelector(".btn-search-active");
   const $boxModal = document.querySelector(".box-modal");
   $btnOpen.addEventListener("click", (e) => {

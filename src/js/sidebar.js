@@ -1,4 +1,4 @@
-export const sidebarClose = (() => {
+const sidebarClose = (() => {
   const $btnClose = document.querySelector(".sidebar-close");
   const $sidebarWrap = document.querySelector(".sidebar-wrap");
   $btnClose.addEventListener("click", () => {
@@ -6,7 +6,7 @@ export const sidebarClose = (() => {
   });
 })();
 
-export const sidebarOpen = (() => {
+const sidebarOpen = (() => {
   const $btnOpne = document.querySelector(".btn-sidebar");
   const $sidebarWrap = document.querySelector(".sidebar-wrap");
   $btnOpne.addEventListener("click", () => {
