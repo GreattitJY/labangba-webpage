@@ -46,10 +46,56 @@
   gap: 4px;
   font-size: 1.6rem;
   font-weight: 700;
-  padding: 8px 0;
+  padding: 7px 0;
 }
 
 .sidebar-section a > img {
   width: 20px;
   height: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding-left: 180px;
+  }
+  .sidebar-wrap {
+    position: static;
+    display: block;
+  }
+
+  .sidebar-header {
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+  .sidebar-container {
+    position: fixed;
+    left: 0;
+    width: auto;
+    background-color: var(--sidebar-black);
+    padding: 0;
+  }
+
+  .sidebar-section {
+    padding: 0 13px 22px 13px;
+    border-bottom: 0;
+  }
+
+  .sidebar-section a {
+    color: #fff;
+    padding-left: 7px;
+  }
+  .sidebar-section a > img {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(324deg) brightness(101%) contrast(102%);
+  }
+
+  .sidebar-close {
+    padding: 0;
+  }
+
+  .sidebar-close > img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(324deg) brightness(101%) contrast(102%);
+  }
 }
