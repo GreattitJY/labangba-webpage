@@ -1,0 +1,30 @@
+.main {
+  padding: 0 20px 60px;
+}
+
+@media screen and (min-width: 1080px) {
+  .main {
+    margin: 0 7%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main {
+    padding: 0px 20px 100px;
+  }
+}
+
+.link-ad img {
+  margin: 40px 0 30px;
+  border-radius: 10px;
+  width: 100%;
+  height: calc((100vw - 40px) / 4);
+}
+
+@media screen and (min-width: 1000px) {
+  .link-ad img {
+    height: 175px;
+    margin: 40px 0 30px;
+    object-fit: cover;
+  }
+}
