@@ -1,5 +1,4 @@
 const $body = document.querySelector("body");
-const $main = document.querySelector("main");
 
 const $btnOpne = document.querySelector(".btn-sidebar");
 const $btnClose = document.querySelector(".sidebar-close");
@@ -21,13 +20,6 @@ const sidebarShow = () => {
 };
 
 const sidebarOpen = () => {
-  const mainMargin = matchMedia("screen and (min-width: 1200px)");
-
-  if (mainMargin.matches) {
-    $main.style.margin = "0 7%";
-  } else {
-    $main.style.margin = "0";
-  }
   $sidebarTitle.classList.remove("ir");
   $sidebarTitleSub.textContent = "데이터분석";
   $body.style.paddingLeft = "180px";
@@ -39,11 +31,6 @@ const sidebarOpen = () => {
 };
 
 const sidebarMini = () => {
-  const mainMargin = matchMedia("screen and (min-width: 1200px)");
-
-  if (mainMargin.matches) {
-    $main.style.margin = "0 13%";
-  }
   [...$sidebarLinkText].map((span) => (span.style.display = "none"));
   $sidebarTitle.classList.add("ir");
   $sidebarTitleSub.textContent = "데이터";
@@ -98,8 +85,6 @@ window.onresize = function () {
     $sidebarWrap.removeEventListener("mouseover", mouseIn);
     $sidebarWrap.removeEventListener("mouseout", mouseOut);
   } else if (width >= 1000 && width < 1200) {
-    $main.style.margin = "0";
-
     $sidebarWrap.style.display = "block";
     $body.style.paddingLeft = "64px";
     sidebarMini();
