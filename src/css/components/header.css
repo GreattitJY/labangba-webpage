@@ -118,12 +118,12 @@
 }
 
 /* 텍스트 링크 */
-.text-info {
+.text-hilght {
   display: none;
 }
 
 @media screen and (min-width: 1000px) {
-  .text-info {
+  .text-hilght {
     display: flex;
     align-items: center;
     width: calc(100vw - 730px);
