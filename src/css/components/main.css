@@ -57,7 +57,7 @@
   border-bottom: 2px solid var(--text-black);
 }
 
-.btn-info {
+.btn-tooltip {
   width: 22px;
   height: 22px;
   background-image: url("../../assets/images/tooltip_icon.svg");

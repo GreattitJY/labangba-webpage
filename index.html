@@ -13,12 +13,17 @@
   <script src="./src/js/rollingText.js" defer></script>
   <script src="./src/js/searchModal.js" defer></script>
   <script src="./src/js/sidebar.js" defer></script>
+  <script src="./src/js/tooltip.js" defer></script>
 
 </head>
 
 <body>
 
+
+  <!-- 네비게이션 -->
   <nav>
+
+    <!-- 헤더 메뉴바 -->
     <header class="header">
       <h1 class="ir">라방 데이터랩 메뉴바</h1>
       <button class="btn-sidebar">
@@ -38,19 +43,21 @@
         <a href="" class="link-goods">문구가 바뀌는 부분 말줄임표 테스트 테스트테스트테스트asdadasdadadadsadad</a>
       </div>
 
-      <!-- 로그인 : 화면 너비가 1000px 이상일 때 -->
+      <!-- 로그인 -->
+      <!-- 반응형 : 화면 너비가 1000px 이상일 때 -->
       <article class="article-login">
         <h2 class="ir">로그인 및 회원가입</h2>
         <img src="./src/assets/images/gnb_user.svg" alt="" class="img-login">
         <a href="" class="text-login">로그인</a>
         <a href="" class="text-signup">회원가입</a>
       </article>
-      <!-- 로그인, 돋보기 : 화면 너비가 1000px 미만일 때 -->
+      <!-- 반응형 : 화면 너비가 1000px 미만일 때 -->
       <button class="btn-search-active" type="button" aria-label="검색창 활성화 버튼">
       </button>
       <a href="" class="link-login">
         <img src="./src/assets/images/gnb_user_(1).svg" alt="로그인 페이지 링크입니다." class="img-login">
       </a>
+      <!-- /로그인 -->
 
       <section class="box-modal">
         <h3 class="ir">검색창</h3>
@@ -64,7 +71,9 @@
 
       </section>
     </header>
+    <!-- /헤더메뉴바 -->
 
+    <!-- 사이드바 -->
     <aside class="sidebar-wrap">
       <div class="sidebar-container">
         <header class="sidebar-header">
@@ -140,17 +149,22 @@
         </section>
       </div>
     </aside>
+    <!-- /사이드바 -->
   </nav>
+  <!-- /네비게이션 -->
+
+  <!-- 메인 콘텐츠 -->
   <main class="main">
     <a href="" class="link-ad">
       <img src="./src/assets/images/test_banner_4_solarsail.png" alt="">
     </a>
 
+    <!-- 라이브커머스 통계 -->
     <section class="box-info">
       <h2 class="info-title">
         <img src="./src/assets/images/title_play.svg" alt="">
         <span>1월 31일 라이브커머스 통계</span>
-        <button type="button" class="btn-info"></button>
+        <button type="button" class="btn-tooltip" aria-label="도움말 버튼" data-set="statistic"></button>
       </h2>
       <div class="text-wrap">
         <div class="text-container">
@@ -176,8 +190,26 @@
         </div>
       </div>
     </section>
+    <!-- /라이브커머스 통계 -->
 
   </main>
+  <!-- /메인 콘텐츠 -->
+
+  <!-- 툴팁 모달 -->
+  <div class="tooltip-wrap">
+    <section class="tooltip-container">
+      <header>
+        <h5 class="tooltip-title"></h5>
+        <button class="tooltip-close">
+          <img src="./src/assets/images/lnb_close.svg" alt="닫기 버튼입니다.">
+        </button>
+      </header>
+      <p class="tooltip-info"></p>
+    </section>
+    <!-- /튤팁 모달 -->
+
+  </div>
+
 </body>
 
 </html>

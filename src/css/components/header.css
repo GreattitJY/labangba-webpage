@@ -9,6 +9,7 @@
   padding: 12px 20px;
   box-shadow: 0 2px 4px var(--border-light-gray);
   background-color: #fff;
+  z-index: 9999;
 }
 
 @media screen and (min-width: 1000px) {
