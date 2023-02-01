@@ -206,6 +206,22 @@
         </fieldset>
       </form>
     </section>
+    <section class="box-info">
+      <h2 class="info-title">
+        카테고리를 선택하여 라방 판매 순위를 확인해보세요.
+      </h2>
+      <form class="form-categori">
+        <fieldset class="fieldset-categori">
+          <legend class="ir">카테고리 선택창</legend>
+          <button type="button" class="btn-categori">분류</button>
+          <button type="button" class="btn-categori">카테고리</button>
+        </fieldset>
+        <fieldset class="fieldset-categori">
+          <legend class="ir">카테고리 보기</legend>
+          <button class="btn-categori-submit">카테고리 분석 보기</button>
+        </fieldset>
+      </form>
+    </section>
     <!-- /categori select-box -->
 
   </main>
@@ -215,7 +231,7 @@
     <section class="tooltip-container">
       <header>
         <h5 class="tooltip-title"></h5>
-        <button class="tooltip-close">
+        <button class="tooltip-close" type="button">
           <img src="./src/assets/images/lnb_close.svg" alt="닫기 버튼입니다.">
         </button>
       </header>
@@ -223,6 +239,49 @@
     </section>
   </div>
   <!-- /tooltip-box -->
+
+  <!-- select modal -->
+  <div class="select-wrap">
+    <section class="select-container">
+      <header>
+        <h5 class="select-title">분류</h5>
+        <button class="select-close" type="button">
+          <img src="./src/assets/images/lnb_close.svg" alt="닫기 버튼입니다.">
+        </button>
+      </header>
+      <ul class="select-member">
+        <li>
+          <button type="button">패션의류</button>
+        </li>
+        <li>
+          <button type="button">패션잡화</button>
+        </li>
+        <li>
+          <button type="button">화장품/미용</button>
+        </li>
+        <li>
+          <button type="button">디지털/가전</button>
+        </li>
+        <li>
+          <button type="button">가구/인테리어</button>
+        </li>
+        <li>
+          <button type="button">출산/육아</button>
+        </li>
+        <li>
+          <button type="button">식품</button>
+        </li>
+        <li>
+          <button type="button">스포츠/레저</button>
+        </li>
+        <li>
+          <button type="button">생활/건강</button>
+        </li>
+      </ul>
+      <button type="button" class="select-confirm">확인</button>
+    </section>
+  </div>
+  <!-- /select modal -->
 
 </body>
 
