@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  letter-spacing: -0.04em;
 }
 
 html,
@@ -149,4 +150,6 @@ a:visited {
 /* 너비가 1000px 미만일 때 높이 */
 body {
   padding-top: 60px;
+  min-height: 100%;
+  position: relative;
 }
