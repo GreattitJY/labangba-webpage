@@ -3,6 +3,7 @@
   position: absolute;
   inset: 0;
   background-color: var(--sidebar-wrap-gray);
+  z-index: 9999;
 }
 
 .sidebar-container {
