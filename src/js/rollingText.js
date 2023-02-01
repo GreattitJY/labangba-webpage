@@ -1,22 +1,22 @@
 const rollingTextJSON = [
   {
-    title: "화장품/미용 길이 테스트 길이 테스트 길이 테스트 dsfsdfsfsfsfsfdsfsfdasdasdaadsasdadada",
+    title: "[키즈라이브데이] 낮잠이불과 함께하는 신학기 준비",
     link: "",
   },
   {
-    title: "[아크온]실내 자전거 가나다라 마바사 길이 테스트 길이 테스트 길이 테스트 dsfdsfdsdfsdsfdfsdasdadsadasf",
+    title: "📣[SOUP최대89%]무배+이건사야해템😁라이브특가",
     link: "",
   },
   {
-    title: "식품 길이 테스트 길이 테스트 길이 테스트 sdfdsfsdfdsfdsfsfsdfsfadsadadaadsasdsadsf",
+    title: "식품",
     link: "",
   },
   {
-    title: "hello world! 길이 테스트 길이 테스트 길이 테스트 dsdsdfmsdklfmsjlfkasdadasdjflsdklfs",
+    title: "[쁘띠엘린X밀로앤개비]어린이집 준비물 모두해 DREAM",
     link: "",
   },
   {
-    title: "출산/육아 길이 테스트 길이 테스트 길이 테스트 sdasdadasdasdadadadaadadasdadadsdas",
+    title: "출산/육아",
     link: "",
   },
 ];
