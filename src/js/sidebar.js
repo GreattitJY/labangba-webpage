@@ -22,7 +22,7 @@ const sidebarShow = () => {
 const sidebarOpen = () => {
   $sidebarTitle.classList.remove("ir");
   $sidebarTitleSub.textContent = "데이터분석";
-  $body.style.paddingLeft = "180px";
+  $body.style.paddingLeft = "170px";
   $imgClose.setAttribute("src", "./src/assets/images/lnb_close.svg");
   $imgClose.removeAttribute("id");
   $imgClose.setAttribute("alt", "사이드바 닫기 버튼입니다.");
@@ -73,41 +73,6 @@ const mouseOut = () => {
   $body.style.paddingLeft = "64px";
   sidebarMini();
   sidebarView();
-};
-
-window.onresize = function () {
-  const width = window.innerWidth;
-
-  if (width >= 1200) {
-    $body.style.paddingLeft = "180px";
-    sidebarOpen();
-
-    $sidebarWrap.removeEventListener("mouseover", mouseIn);
-    $sidebarWrap.removeEventListener("mouseout", mouseOut);
-  } else if (width >= 1000 && width < 1200) {
-    $sidebarWrap.style.display = "block";
-    $body.style.paddingLeft = "64px";
-    sidebarMini();
-    sidebarView();
-
-    $sidebarWrap.addEventListener("mouseover", mouseIn);
-    $sidebarWrap.addEventListener("mouseout", mouseOut);
-  } else {
-    $sidebarWrap.style.display = "none";
-    $body.style.paddingLeft = "0px";
-
-    $sidebarWrap.removeEventListener("mouseover", mouseIn);
-    $sidebarWrap.removeEventListener("mouseout", mouseOut);
-
-    // onresize 재사용 - select 반응형 레이아웃에 따른 none처리 (추후 수정 필요)
-    // const $wrap = document.querySelector(".select-wrap");
-    $categoriWrap.style.display = "none";
-    $categoriWrap.removeEventListener("click", selectWebConfirm);
-  }
-
-  // onresize 재사용 오류로 인한 tooltipWrap 함수 이동 (추후 수정 필요)
-  const $tooltipWrap = document.querySelector(".tooltip-wrap");
-  $tooltipWrap.style.display = "none";
 };
 
 sidebarClose();

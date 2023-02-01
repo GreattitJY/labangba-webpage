@@ -7,7 +7,7 @@ const $tooltipClose = $tooltipWrap.querySelector(".tooltip-close");
 const tooltipLocation = (x, y) => {
   $tooltipWrap.style.display = "block";
   $tooltipContainer.style.left = x + "px";
-  $tooltipContainer.style.top = y - 90 + "px";
+  $tooltipContainer.style.top = y + "px";
 };
 
 const tooltipGenerantor = (e) => {

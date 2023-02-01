@@ -57,7 +57,7 @@
 
 @media screen and (min-width: 1000px) {
   body {
-    padding-left: 180px;
+    padding-left: 170px;
   }
   .sidebar-wrap {
     position: static;
