@@ -98,6 +98,11 @@ window.onresize = function () {
 
     $sidebarWrap.removeEventListener("mouseover", mouseIn);
     $sidebarWrap.removeEventListener("mouseout", mouseOut);
+
+    // onresize 재사용 - select 반응형 레이아웃에 따른 none처리 (추후 수정 필요)
+    // const $wrap = document.querySelector(".select-wrap");
+    $categoriWrap.style.display = "none";
+    $categoriWrap.removeEventListener("click", selectWebConfirm);
   }
 
   // onresize 재사용 오류로 인한 tooltipWrap 함수 이동 (추후 수정 필요)

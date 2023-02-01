@@ -12,6 +12,8 @@ const $selectBtnSubmit = document.querySelector(".btn-categori-submit");
 const selectOpen = () => {
   const width = window.innerWidth;
   if (width >= 1000) return;
+  const $body = document.querySelector("body");
+  $body.appendChild($categoriWrap);
   $selectWrap.style.display = "flex";
 };
 

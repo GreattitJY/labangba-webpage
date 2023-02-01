@@ -91,3 +91,55 @@
 .select-confirm:hover {
   background-color: var(--text-hilght-yellow);
 }
+
+@media screen and (min-width: 1000px) {
+  .select-wrap {
+    background-color: inherit;
+    z-index: 99;
+    position: absolute;
+  }
+  .select-container {
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .select-container header {
+    padding-top: 12px;
+  }
+
+  .select-title {
+    text-align: start;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-light-gray);
+  }
+
+  .select-close {
+    background-color: #fff;
+    top: 14px;
+  }
+
+  .select-member {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .select-member li button {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 14px 20px;
+    border-radius: 0;
+  }
+
+  .select-member li button:hover {
+    background-color: var(--border-white-gray);
+  }
+
+  .select-member li button::before {
+    display: none;
+  }
+
+  .select-confirm {
+    display: none;
+  }
+}
