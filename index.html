@@ -20,10 +20,9 @@
 <body>
 
 
-  <!-- 네비게이션 -->
   <nav>
 
-    <!-- 헤더 메뉴바 -->
+    <!-- header menu -->
     <header class="header">
       <h1 class="ir">라방 데이터랩 메뉴바</h1>
       <button class="btn-sidebar">
@@ -43,21 +42,21 @@
         <a href="" class="link-goods">문구가 바뀌는 부분 말줄임표 테스트 테스트테스트테스트asdadasdadadadsadad</a>
       </div>
 
-      <!-- 로그인 -->
-      <!-- 반응형 : 화면 너비가 1000px 이상일 때 -->
+      <!-- login -->
+      <!-- media : 화면 너비가 1000px 이상일 때 -->
       <article class="article-login">
         <h2 class="ir">로그인 및 회원가입</h2>
         <img src="./src/assets/images/gnb_user.svg" alt="" class="img-login">
         <a href="" class="text-login">로그인</a>
         <a href="" class="text-signup">회원가입</a>
       </article>
-      <!-- 반응형 : 화면 너비가 1000px 미만일 때 -->
+      <!-- media : 화면 너비가 1000px 미만일 때 -->
       <button class="btn-search-active" type="button" aria-label="검색창 활성화 버튼">
       </button>
       <a href="" class="link-login">
         <img src="./src/assets/images/gnb_user_(1).svg" alt="로그인 페이지 링크입니다." class="img-login">
       </a>
-      <!-- /로그인 -->
+      <!-- /login -->
 
       <section class="box-modal">
         <h3 class="ir">검색창</h3>
@@ -71,9 +70,9 @@
 
       </section>
     </header>
-    <!-- /헤더메뉴바 -->
+    <!-- /header menu -->
 
-    <!-- 사이드바 -->
+    <!-- sidebar -->
     <aside class="sidebar-wrap">
       <div class="sidebar-container">
         <header class="sidebar-header">
@@ -149,17 +148,15 @@
         </section>
       </div>
     </aside>
-    <!-- /사이드바 -->
+    <!-- /sidebar -->
   </nav>
-  <!-- /네비게이션 -->
 
-  <!-- 메인 콘텐츠 -->
   <main class="main">
     <a href="" class="link-ad">
       <img src="./src/assets/images/test_banner_4_solarsail.png" alt="">
     </a>
 
-    <!-- 라이브커머스 통계 -->
+    <!-- live statistic -->
     <section class="box-info">
       <h2 class="info-title">
         <img src="./src/assets/images/title_play.svg" alt="">
@@ -190,12 +187,30 @@
         </div>
       </div>
     </section>
-    <!-- /라이브커머스 통계 -->
+    <!-- /live statistic -->
+
+    <!-- categori select-box -->
+    <section class="box-info">
+      <h2 class="info-title">
+        카테고리를 선택하여 라방 판매 순위를 확인해보세요.
+      </h2>
+      <form class="form-categori">
+        <fieldset class="fieldset-categori">
+          <legend class="ir">카테고리 선택창</legend>
+          <button type="button" class="btn-categori">분류</button>
+          <button type="button" class="btn-categori">카테고리</button>
+        </fieldset>
+        <fieldset class="fieldset-categori">
+          <legend class="ir">카테고리 보기</legend>
+          <button class="btn-categori-submit">카테고리 분석 보기</button>
+        </fieldset>
+      </form>
+    </section>
+    <!-- /categori select-box -->
 
   </main>
-  <!-- /메인 콘텐츠 -->
 
-  <!-- 툴팁 모달 -->
+  <!-- tooltip-box -->
   <div class="tooltip-wrap">
     <section class="tooltip-container">
       <header>
@@ -206,9 +221,8 @@
       </header>
       <p class="tooltip-info"></p>
     </section>
-    <!-- /튤팁 모달 -->
-
   </div>
+  <!-- /tooltip-box -->
 
 </body>
 

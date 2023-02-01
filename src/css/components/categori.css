@@ -1,0 +1,56 @@
+.fieldset-categori {
+  display: flex;
+  gap: 12px;
+}
+
+.fieldset-categori button {
+  border: 1px solid var(--border-light-gray);
+  border-radius: 23px;
+  font-size: 1.4rem;
+  flex: 1;
+}
+
+.btn-categori {
+  color: var(--text-light-gray);
+  text-align: start;
+  font-weight: 500;
+  padding: 11px 20px;
+  background: url("../../assets/images/select_arrow_down.svg") no-repeat center right 18px;
+  cursor: default;
+}
+
+.btn-categori-submit {
+  color: var(--text-gray-black);
+  font-weight: 700;
+  background-color: var(--border-light-gray);
+  padding: 13px 0;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 1000px) {
+  .form-categori {
+    display: flex;
+  }
+  .fieldset-categori {
+    align-items: center;
+  }
+
+  .fieldset-categori:first-child {
+    flex-grow: 2;
+  }
+
+  .fieldset-categori:last-child {
+    flex-grow: 1;
+  }
+
+  .btn-categori {
+    width: 300px;
+    padding: 13px 20px;
+  }
+
+  .btn-categori-submit {
+    width: 330px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
