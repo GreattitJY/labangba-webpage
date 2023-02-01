@@ -39,7 +39,3 @@ $tooltipWrap.addEventListener("click", (e) => {
 $tooltipClose.addEventListener("click", () => {
   $tooltipWrap.style.display = "none";
 });
-
-window.onresize = () => {
-  $tooltipWrap.style.display = "none";
-};

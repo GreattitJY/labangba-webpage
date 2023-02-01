@@ -89,6 +89,7 @@ window.onresize = function () {
     $body.style.paddingLeft = "64px";
     sidebarMini();
     sidebarView();
+    console.log("object");
 
     $sidebarWrap.addEventListener("mouseover", mouseIn);
     $sidebarWrap.addEventListener("mouseout", mouseOut);
@@ -99,6 +100,10 @@ window.onresize = function () {
     $sidebarWrap.removeEventListener("mouseover", mouseIn);
     $sidebarWrap.removeEventListener("mouseout", mouseOut);
   }
+
+  // onresize 재사용 오류로 인한 tooltipWrap 함수 이동 (추후 수정 필요)
+  const $tooltipWrap = document.querySelector(".tooltip-wrap");
+  $tooltipWrap.style.display = "none";
 };
 
 sidebarClose();
