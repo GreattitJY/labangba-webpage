@@ -1,6 +1,6 @@
 .sidebar-wrap {
   display: none;
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: var(--sidebar-wrap-gray);
   z-index: 9999;
