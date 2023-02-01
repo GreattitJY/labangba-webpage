@@ -89,7 +89,6 @@ window.onresize = function () {
     $body.style.paddingLeft = "64px";
     sidebarMini();
     sidebarView();
-    console.log("object");
 
     $sidebarWrap.addEventListener("mouseover", mouseIn);
     $sidebarWrap.addEventListener("mouseout", mouseOut);
