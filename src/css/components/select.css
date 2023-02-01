@@ -1,15 +1,14 @@
 .select-wrap {
-  /* display: none; */
+  display: none;
+  /* display: flex; */
   position: fixed;
   inset: 0;
   z-index: 9999;
   background-color: var(--sidebar-wrap-gray);
-  display: flex;
 }
 
 .select-container {
   width: 320px;
-  /* height: 450px; */
   overflow: hidden;
   margin: auto;
   border-radius: 10px;
