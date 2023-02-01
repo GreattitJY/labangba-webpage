@@ -11,7 +11,10 @@ const searchClose = (() => {
 const searchOpen = (() => {
   const $btnOpen = document.querySelector(".btn-search-active");
   const $boxModal = document.querySelector(".box-modal");
+  const $inpSearch = document.querySelector(".input-search-modal");
+
   $btnOpen.addEventListener("click", (e) => {
     $boxModal.style.display = "flex";
+    $inpSearch.focus();
   });
 })();
