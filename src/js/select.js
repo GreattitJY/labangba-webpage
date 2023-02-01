@@ -10,6 +10,8 @@ const $selectConfirm = $selectWrap.querySelector(".select-confirm");
 const $selectBtnSubmit = document.querySelector(".btn-categori-submit");
 
 const selectOpen = () => {
+  const width = window.innerWidth;
+  if (width >= 1000) return;
   $selectWrap.style.display = "flex";
 };
 
