@@ -38,12 +38,6 @@
   margin-bottom: 0px;
 }
 
-@media screen and (min-width: 1000px) {
-  .box-info {
-    margin-bottom: 100px;
-  }
-}
-
 /* 통계 부분 */
 
 .info-title {
